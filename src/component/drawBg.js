@@ -28,15 +28,16 @@ export class Canvas {
         this.maxRadius = 190;
         this.minRadius = 140;
 
-        window.addEventListener('resize', this.resize.bind(this), false);
-        this.resize();
+        window.addEventListener('resize', this.resize.bind(this), true);
+
 
         window.requestAnimationFrame(this.animate.bind(this));
+        this.resize();
     }
 
     resize() {
-        this.stageWidth = this.container.clientWidth;
-        this.stageHeight = this.container.clientHeight;
+        this.stageWidth = this.wrapper.clientWidth;
+        this.stageHeight = this.wrapper.clientHeight;
 
         this.canvas.width = this.stageWidth * this.pixelRatio;
         this.canvas.height = this.stageHeight;

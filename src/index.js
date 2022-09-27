@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 preview.remove();
             }, 1500)
         }
-    }, 6000);
+    }, 4000);
 
     toggleMenu();
 });
