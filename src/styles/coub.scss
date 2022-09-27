@@ -1,0 +1,65 @@
+.coub {
+	background-image: url("asset/coub.png");
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 300px;
+	z-index: 2;
+	animation-name: coub;
+	animation-direction: alternate;
+	animation-play-state: running;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 5s;
+
+
+	&:nth-child(1) {
+		filter: drop-shadow(0px 103.371px 100px rgba(192, 197, 223, 0.66));
+		transform: rotate(55deg);
+		top: 110px;
+		right: -174px;
+		animation-delay: 0.3s;
+	}
+
+	&:nth-child(2) {
+		top: 5px;
+		left: -350px;
+		width: 400px;
+		height: 500px;
+		filter: drop-shadow(0px 103.371px 100px rgba(192, 197, 223, 0.66));
+		animation-delay: 0.8s;
+	}
+
+	&:nth-child(3) {
+		filter: blur(10px) drop-shadow(0px 103.371px 100px rgba(192, 197, 223, 0.66));
+		transform: rotate(-30deg);
+		width: 728px;
+		height: 844px;
+		top: 52%;
+		right: -500px;
+		animation-delay: 0.5s;
+	}
+
+	&:nth-child(4) {
+		filter: blur(10px) drop-shadow(0px 103.371px 100px rgba(192, 197, 223, 0.66));
+		transform: rotate(-30deg);
+		width: 728px;
+		height: 844px;
+		top: 52%;
+		left: -400px;
+		z-index: 1;
+		animation-delay: 0.1s;
+	}
+}
+
+
+@keyframes coub {
+	0% {
+		transform: translateY(8px) rotate3d(0, 0, 1, 3deg);
+	}
+
+	100% {
+	transform: translateY(-8px) rotate3d(0, 0, 1, 0deg);
+	}
+}
